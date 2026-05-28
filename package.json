@@ -6,16 +6,21 @@
   "application-type": "cloud-ts",
   "main": "src/index.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && bun run phy-build",
     "start": "node dist/index.js",
     "dev": "bun --watch src/index.ts",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "phy-schema": "mkdir -p build && npx ts-schema src/schema.ts build && bun -e \"import s from './src/analytics-schema.ts'; console.log(JSON.stringify(s, null, 2))\" > build/analytics-schema.json && cp manifest.json build/",
+    "phy-build": "bun run phy-schema && phy app build",
+    "phy-pub": "phy app publish",
+    "pub": "bun run phy-pub"
   },
   "dependencies": {
-    "@phystack/hub-client": "workspace:*"
+    "@phystack/hub-client": "^6.1.1"
   },
   "devDependencies": {
-    "@phystack/tsconfig": "workspace:*",
+    "@phystack/cli": "^6.1.1",
+    "@phystack/ts-schema": "^4.4.74",
     "@types/node": "^24.0.0",
     "typescript": "^5.9.3"
   }
