@@ -85,6 +85,8 @@ tsconfig.json           # TypeScript compiler configuration
 | `bun start` | Run the compiled app (`node dist/index.js`) |
 | `bun run build` | Compile TypeScript, generate schemas, and package the `.gridapp` |
 | `bun run lint` | Type-check without emitting (`tsc --noEmit`) |
+| `bun run phy-schema` | Generate JSON schemas from `src/schema.ts` and `src/analytics-schema.ts` into `build/` |
+| `bun run phy-build` | Run `phy-schema` then `phy app build` to create the `.gridapp` package |
 | `bun run pub` | Publish the `.gridapp` to your tenant |
 
 ## Connection Model
