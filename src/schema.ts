@@ -11,7 +11,7 @@ export type Settings = {
    * @title Event names
    * @description Names of analytics events to emit.
    * @minItems 1
-   * @default ["page_view", "click"]
+   * @default ["PAGE_VIEW", "CLICK_EVENT"]
    */
   eventNames: NonEmptyString[];
 
