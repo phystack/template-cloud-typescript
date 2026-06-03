@@ -16,10 +16,10 @@
     "pub": "bun run phy-pub"
   },
   "dependencies": {
-    "@phystack/hub-client": "^6.1.1"
+    "@phystack/hub-client": "^6.2.0"
   },
   "devDependencies": {
-    "@phystack/cli": "^6.1.1",
+    "@phystack/cli": "^6.2.0",
     "@phystack/ts-schema": "^4.4.74",
     "@types/node": "^24.0.0",
     "typescript": "^5.9.3"
