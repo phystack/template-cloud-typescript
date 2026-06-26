@@ -4,7 +4,7 @@ Starter template for scaffolding new cloud apps on the PhyStack platform.
 
 ## Overview
 
-This repository is a project template used by `@phystack/cli` to scaffold new cloud apps. Cloud apps are server-side services that connect to PhyHub via `@phystack/hub-client`, receive operator-configured settings through Cloud twin desired properties, and can emit analytics events back to PhyHub.
+This repository is a project template used by the `phy` CLI to scaffold new cloud apps. Cloud apps are server-side services that connect to PhyHub via `@phystack/hub-client`, receive operator-configured settings through Cloud twin desired properties, and can emit analytics events back to PhyHub.
 
 Unlike edge apps which run as Docker containers on devices, cloud apps run as standalone processes and connect to PhyHub over Socket.IO. A single cloud-app process serves all installations of a Gridapp across every tenant.
 
@@ -22,7 +22,7 @@ This template does not deploy anywhere on its own.
 ## Prerequisites
 
 - Bun 1.x+ (or Node.js 24+)
-- `@phystack/cli` installed globally (`npm i -g @phystack/cli`)
+- `phy` CLI installed globally (`npm i -g @phystack/cli@dev`)
 
 ## Getting Started
 
@@ -59,10 +59,11 @@ Build the `.gridapp` package:
 bun run build
 ```
 
-Publish to your tenant:
+Publish to your tenant (requires global `phy` CLI):
 
 ```bash
-bun run pub
+phy app build create <app-id> --file build/bundle.gridapp
+phy app build publish <app-id> <build-id>
 ```
 
 ## Project Structure
@@ -86,8 +87,7 @@ tsconfig.json           # TypeScript compiler configuration
 | `bun run build` | Compile TypeScript, generate schemas, and package the `.gridapp` |
 | `bun run lint` | Type-check without emitting (`tsc --noEmit`) |
 | `bun run phy-schema` | Generate JSON schemas from `src/schema.ts` and `src/analytics-schema.ts` into `build/` |
-| `bun run phy-build` | Run `phy-schema` then `phy app build` to create the `.gridapp` package |
-| `bun run pub` | Publish the `.gridapp` to your tenant |
+| `bun run phy-build` | Run `phy-schema` then `phy app package` to create the `.gridapp` package |
 
 ## Connection Model
 
