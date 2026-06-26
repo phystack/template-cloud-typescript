@@ -11,15 +11,12 @@
     "dev": "bun --watch src/index.ts",
     "lint": "tsc --noEmit",
     "phy-schema": "mkdir -p build && npx ts-schema src/schema.ts build && bun -e \"import s from './src/analytics-schema.ts'; console.log(JSON.stringify(s, null, 2))\" > build/analytics-schema.json && cp manifest.json build/",
-    "phy-build": "bun run phy-schema && phy app build",
-    "phy-pub": "phy app publish",
-    "pub": "bun run phy-pub"
+    "phy-build": "bun run phy-schema && phy app package --out build/bundle.gridapp"
   },
   "dependencies": {
     "@phystack/hub-client": "^6.2.0"
   },
   "devDependencies": {
-    "@phystack/cli": "^6.2.0",
     "@phystack/ts-schema": "^4.4.74",
     "@types/node": "^24.0.0",
     "typescript": "^5.9.3"

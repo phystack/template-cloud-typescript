@@ -8,7 +8,6 @@
         "@phystack/hub-client": "^6.2.0",
       },
       "devDependencies": {
-        "@phystack/cli": "^6.2.0",
         "@phystack/ts-schema": "^4.4.74",
         "@types/node": "^24.0.0",
         "typescript": "^5.9.3",
@@ -16,25 +15,7 @@
     },
   },
   "packages": {
-    "@phystack/cli": ["@phystack/cli@6.2.0", "", { "optionalDependencies": { "@phystack/phy-darwin-arm64": "6.2.0", "@phystack/phy-darwin-x64": "6.2.0", "@phystack/phy-linux-arm64": "6.2.0", "@phystack/phy-linux-arm64-musl": "6.2.0", "@phystack/phy-linux-x64": "6.2.0", "@phystack/phy-linux-x64-musl": "6.2.0", "@phystack/phy-win32-arm64": "6.2.0", "@phystack/phy-win32-x64": "6.2.0" }, "bin": { "phy": "bin/index.js" } }, "sha512-FEie7cW4RcschWmOyX8w0i2/cqmXH695Xh8+g1D8JmTeFO79+L6qh6ZUCGcEk296MXYqOtq+xxv0HstrfPFvBw=="],
-
     "@phystack/hub-client": ["@phystack/hub-client@6.2.0", "", { "dependencies": { "@phystack/socket.io-proxy": "6.2.0", "axios": "^1.7.9", "lodash": "^4.17.21", "lodash.isnil": "^4.0.0", "lodash.omitby": "^4.6.0", "lodash.once": "^4.1.1", "socket.io-client": "^4.7.5", "uuid": "^11.0.5", "zod": "^3.24.2" }, "optionalDependencies": { "@roamhq/wrtc": "^0.8.0", "bufferutil": "^4.0.9", "https-proxy-agent": "^7.0.6", "utf-8-validate": "^6.0.5" } }, "sha512-A3ZOjYcI1urjb7ngWIWfAW5UjAgtoCIc8Zx8a+2A98zui5dxRr9W/jn3ybFtWbuYwYIfqxtJFqBCUpP2mv2qRg=="],
-
-    "@phystack/phy-darwin-arm64": ["@phystack/phy-darwin-arm64@6.2.0", "", { "os": "darwin", "cpu": "arm64" }, "sha512-dHrtZiP/eaSWUgrysSc97rb/5fX/dS1cBl8fI5XiXmVdP5FZmgDfgA2Lh1Fx+gUSs3QrjsnTAyXgSIB99PBTOg=="],
-
-    "@phystack/phy-darwin-x64": ["@phystack/phy-darwin-x64@6.2.0", "", { "os": "darwin", "cpu": "x64" }, "sha512-ODMUKJnnCPLH8VKIEiwWduO+jAMiePm4iLByP0awp9gIvQhVDidy5LvxIbnqbxUwnPeY7gxLCnG5HGNBOEOxZA=="],
-
-    "@phystack/phy-linux-arm64": ["@phystack/phy-linux-arm64@6.2.0", "", { "os": "linux", "cpu": "arm64" }, "sha512-mUsjxOfGzKwpzynMGeX8drvR3ntDnplRddRV8KyEqCZjl8zzfDKhj2sLmmiXUac2qOoOsaQNqXQ1pw/5t4ilzg=="],
-
-    "@phystack/phy-linux-arm64-musl": ["@phystack/phy-linux-arm64-musl@6.2.0", "", { "os": "linux", "cpu": "arm64" }, "sha512-OvamgSY3RSnqMOzbvTqUN9/jPWRkJbQO6CV0hyUPiqysp0ouswHPlf42Ez2OWUfB4azNBfQ3T+G5iv9jEZZvGA=="],
-
-    "@phystack/phy-linux-x64": ["@phystack/phy-linux-x64@6.2.0", "", { "os": "linux", "cpu": "x64" }, "sha512-5gNc5Qvn2Iapw0DlV+99zfdCj9hxsddwUdbDcPEr99NnmHS9bCDwxqsD5/7M//x1ZB5azSfb0J9HY8kXGNTOaw=="],
-
-    "@phystack/phy-linux-x64-musl": ["@phystack/phy-linux-x64-musl@6.2.0", "", { "os": "linux", "cpu": "x64" }, "sha512-c0nGBIGAlAWa1FAd6DJA0nJUR543m4mLxmyFOEycj6euFHHhAnCoiClfkrx0m5gFJQsSIGDbh82l7wZsjVcF+w=="],
-
-    "@phystack/phy-win32-arm64": ["@phystack/phy-win32-arm64@6.2.0", "", { "os": "win32", "cpu": "arm64" }, "sha512-aCRitNwCFUWOoom/tUDHO81IiU/I6GwMojz1QpVnW4CxpioaQ1jh0kAZaMjwU7LzKPwe4/kHrw0Pj378bsdamQ=="],
-
-    "@phystack/phy-win32-x64": ["@phystack/phy-win32-x64@6.2.0", "", { "os": "win32", "cpu": "x64" }, "sha512-JRyc21ug7x25eInBpCSp2cCtIphGUubMAvKdxTjGFhquMB78kwWBPTqwj8+5/rz4NDJy71S7uFZyoxYPdVti1A=="],
 
     "@phystack/socket.io-proxy": ["@phystack/socket.io-proxy@6.2.0", "", { "dependencies": { "axios": "^1.7.9", "socket.io-client": "^4.7.5" }, "optionalDependencies": { "bufferutil": "^4.0.9", "http-proxy-agent": "^7.0.2", "https-proxy-agent": "^7.0.6", "utf-8-validate": "^6.0.5" } }, "sha512-DaFbTUu60fWLwgO70eVwgKqpjcEVQFpoydOyIDBZtnqWcUAo/r820xYM8JaRAS2Y8p22Z9bOfOArseapTDOEiw=="],
 
